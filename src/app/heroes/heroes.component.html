@@ -1,0 +1,29 @@
+<!-- 管道 uppercase 大写 -->
+<!-- <h2>{{hero.name | uppercase}} Details</h2>
+<div><span>id: {{hero.id}}</span></div>
+<div><span>name: {{hero.name}}</span></div> -->
+
+<!-- [(ngModel)] 双向绑定 -->
+<!-- <div>
+    <label>name: 
+        <input [(ngModel)] = "hero.name" placeholder="name"/>
+    </label>
+</div> -->
+
+<!-- *ngFor="let [item] of [items]" 指令 -->
+<!-- <h2>My Heroes</h2>
+<ul>
+    <li *ngFor="let hero of heroes">
+        <span class="badge" >{{hero.id}}</span> {{hero.name}}
+    </li>
+</ul> -->
+
+<!-- () 事件绑定 + 事件处理器 -->
+<h2>My Heroes</h2>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes" [class.selected]="hero===selectedHero" (click)="onSelect(hero)">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </li>
+</ul>
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
