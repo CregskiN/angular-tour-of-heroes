@@ -1,3 +1,14 @@
-<h1>{{title}}</h1>
+<!-- 无路由 -->
+<!-- <h1>{{title}}</h1>
 <app-heroes></app-heroes>
+<app-messages></app-messages> -->
+
+<!-- 有路由 -->
+<h1>{{title}}</h1>
+<nav>
+    <a routerLink="/heroes">heroes</a>
+    <a routerLink="/dashboard">dashboard</a>
+</nav>
+    <!-- 由路由控制 -->
+<router-outlet></router-outlet>
 <app-messages></app-messages>
